@@ -24,8 +24,8 @@ class Solution
                 }
             }
         }
-System.Console.WriteLine(numSwaps);
-System.Console.WriteLine("First Element:" + a[0]);
-System.Console.WriteLine("Last Element: " + a.Last());
+        System.Console.WriteLine($"Array is sorted in {numSwaps} swaps.");
+        System.Console.WriteLine("First Element: " + a[0]);
+        System.Console.WriteLine("Last Element: " + a.Last());
     }
 }
