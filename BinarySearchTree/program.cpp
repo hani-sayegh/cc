@@ -14,10 +14,12 @@ bool checkBST(Node *root)
 
 bool isBST(Node *current, int min, int max)
 {
-	return
-	(current != nullptr) 
-	&&
-		if (current->data < min || current->data > max)
-	&&
-	isBST(current->left, min, current->data ) && isBST(current->right, current->data , max);
+	if (current == nullptr)
+		return true;
+
+	auto tmp = current->data;
+	if (tmp <= min || tmp >= max)
+		return false;
+
+	return isBST(current->left, min, current->data ) && isBST(current->right, current->data, max);
 }
